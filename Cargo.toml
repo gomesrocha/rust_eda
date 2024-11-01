@@ -1,0 +1,11 @@
+[package]
+name = "sample_project"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+polars = { version = "0.33.0", features = ["lazy", "csv", "interpolate", "strings", "dtype-full", "dynamic_group_by", "timezones", "cross_join", "semi_anti_join"] }
+
+[features]
+write_output = ["polars/parquet"]
+default = ["write_output"]
